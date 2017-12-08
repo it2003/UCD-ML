@@ -1,0 +1,245 @@
+// developed with mobile fisrt approach for UCDavis Machine Learning Department
+
+//mixins
+@mixin respond-to($media-screen) {
+    @if $media-screen == x-small-screens {
+        @media only screen and (min-width: 540px), print { @content; }
+    }
+    @else if $media-screen == small-screens {    //Min-Width 768px
+        @media only screen and (min-width:768px), print { @content; }
+    }
+    @else if $media-screen == medium-screens { //Min-Width 992px
+        @media only screen and (min-width:992px), print { @content; }
+    }
+    @else if $media-screen == large-screens { //Min-Width 1200px - iPad Landscape
+        @media only screen and (min-width:1200px), print { @content; }
+    }
+    @else if $media-screen == xlarge-screens { //Min-Width 1400px - iPad Landscape
+        @media only screen and (min-width:1400px), print { @content; }
+    }
+}
+
+//fonts
+@font-face {
+    font-family: 'merriweatherregular';
+    src: url('fonts/merriweather-regular-webfont.woff2') format('woff2'),
+         url('fonts/merriweather-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'oswaldregular';
+    src: url('fonts/oswald-regular-webfont.woff2') format('woff2'),
+         url('fonts/oswald-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//variables
+$primary-font: 'oswaldregular';
+$secondary-font: 'merriweatherregular';
+$primary-color: #335379;
+$secondary-color: #fff;
+$third-color: #f5f5f5;
+
+//typography
+body {
+    font-family: $secondary-font;
+    font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $primary-font, 'sans-serif';
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+p {
+    line-height: 24px;
+    font-size: 16px;
+    font-family: $secondary-font;
+}
+
+ul {
+    li {
+        line-height: 24px;
+    }
+}
+
+//menu
+.navbar-default {
+    background-color: $secondary-color;
+    .navbar-toggle {
+        border-color: $primary-color;
+        transition: all 0.2s linear;
+        &:hover, &:focus {
+           background-color: $primary-color;
+           .icon-bar {
+                background-color: $secondary-color;   
+           }
+        }
+        .icon-bar {
+            background-color: $primary-color;
+        }
+    }
+}
+.navbar-brand {
+    padding: 10px 15px;
+}
+.navbar-default .nav > li > a {
+    color: $primary-color;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+    font-family: $primary-font, 'sans-serif';
+    transition: all 0.2s linear;
+    &:hover, &:focus {
+        color: $secondary-color;
+        background-color: $primary-color;
+    }
+}
+
+//helper classes and repeatable styles
+section {
+    padding: 60px 0;
+}
+
+.section-heading {
+    margin-bottom: 20px;
+    h1 {
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+}
+hr {
+    max-width: 100px;
+    border-width: 1px;
+    border-color: rgba(34, 34, 34, 0.1);
+}
+.btn-area {
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    background-color: $secondary-color;
+    transition: all 0.2s linear;
+    &:hover, &:focus {
+        background-color: $primary-color;
+        color: $secondary-color;
+    }
+}
+
+//intro teaser section
+.intro-teaser {
+    padding: 110px 0 60px 0;
+    background: url(../images/intro-teaser.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include respond-to(medium-screens) {
+        height: 315px;
+    }
+    h2 {
+        color: $secondary-color;
+    }
+}
+
+.page-title {
+    letter-spacing: 2px;
+    font-size: 40px;
+    font-family: $primary-font;
+    font-weight: 700;
+    color: $secondary-color;
+}
+
+//people section
+.people {
+    background-color: $secondary-color;
+    .person-item {
+        display: block;
+        text-align: center;
+        margin-bottom: 60px;
+        @include respond-to(small-screens) {
+            height: 300px;
+        }
+        img {    
+            width: 100%;
+            max-width: 200px;
+            margin: 0px auto;
+        }
+        h3 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @include respond-to(small-screens) {
+                min-height: 60px;
+            }
+        }
+        h4 {
+            font-family: $secondary-font;
+        }
+    }
+}
+
+//areas section
+.areas {
+    background-color: $third-color;
+    .area-wrapper {
+        margin: 0 auto;
+        @include respond-to(small-screens) {
+            display: flex;
+        }
+        &:before, &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    }
+    .area-item {
+        max-width: 300px;
+        margin: 0 auto 60px auto;
+        text-align: center;
+        @include respond-to(medium-screens) {
+            margin: 0 10px 60px 10px;
+        }
+        .fa {
+           font-size: 80px;
+           color: $primary-color; 
+        }
+        p {
+            
+            
+        }
+    }
+
+}
+
+//courses section
+.courses {
+    background-color: $secondary-color;
+}
+//apply section
+.apply {
+    background-color: $third-color;
+}
+.courses, .apply {
+    li {margin-bottom: 10px;}
+}
+//contact section
+.contact {
+    background-color: $primary-color;
+    color: $secondary-color;
+    h3 {
+        font-family: $secondary-font;
+    }
+}
+code {
+    display: inline-block;
+    margin: 20px auto 10px auto;
+    color: $primary-color;
+    font-size: 30px;
+}
+
+//footer
+footer {
+    padding: 50px 0;
+    background-color: #222222;
+}
+
