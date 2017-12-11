@@ -168,9 +168,9 @@ hr {
         h3 {
             overflow: hidden;
             text-overflow: ellipsis;
-            @include respond-to(small-screens) {
-                min-height: 60px;
-            }
+//             @include respond-to(small-screens) {
+//                 min-height: 60px;
+//             }
         }
         h4 {
             font-family: $secondary-font;
@@ -178,6 +178,23 @@ hr {
     }
 }
 
+.people-faculty-area {
+    .person-item {
+        transition: all 0.3s linear;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .person-item h3 {
+        min-height: 53px;
+    }
+}
+.people-student-area {
+    .person-item {
+        h3 {min-height: 53px;}
+        h4 {min-height: 58px;}
+    }
+}
 //areas section
 .areas {
     background-color: $third-color;
@@ -198,6 +215,12 @@ hr {
         text-align: center;
         @include respond-to(medium-screens) {
             margin: 0 10px 60px 10px;
+        }
+        h2 {
+            min-height: 66px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .fa {
            font-size: 80px;

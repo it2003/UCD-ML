@@ -111,11 +111,22 @@ hr {
     .people .person-item h3 {
       overflow: hidden;
       text-overflow: ellipsis; }
-      @media only screen and (min-width: 768px), print {
-        .people .person-item h3 {
-          min-height: 60px; } }
     .people .person-item h4 {
       font-family: "merriweatherregular"; }
+
+.people-faculty-area .person-item {
+  transition: all 0.3s linear; }
+  .people-faculty-area .person-item:hover {
+    text-decoration: none; }
+
+.people-faculty-area .person-item h3 {
+  min-height: 53px; }
+
+.people-student-area .person-item h3 {
+  min-height: 53px; }
+
+.people-student-area .person-item h4 {
+  min-height: 58px; }
 
 .areas {
   background-color: #f5f5f5; }
@@ -135,6 +146,11 @@ hr {
     @media only screen and (min-width: 992px), print {
       .areas .area-item {
         margin: 0 10px 60px 10px; } }
+    .areas .area-item h2 {
+      min-height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
     .areas .area-item .fa {
       font-size: 80px;
       color: #335379; }
