@@ -129,13 +129,13 @@ hr {
 
 //intro teaser section
 .intro-teaser {
-    padding: 110px 0 60px 0;
+    padding: 80px 0 60px 0;
     background: url(../images/intro-teaser.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     @include respond-to(medium-screens) {
-        height: 315px;
+        height: 282px;
     }
     h2 {
         color: $secondary-color;
@@ -191,8 +191,14 @@ hr {
 }
 .people-student-area {
     .person-item {
+        min-height: 358px;
         h3 {min-height: 53px;}
-        h4 {min-height: 58px;}
+        h4 {min-height: 40px;}
+        h3, h4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 }
 //areas section

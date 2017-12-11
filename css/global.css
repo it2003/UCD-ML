@@ -77,14 +77,14 @@ hr {
     color: #fff; }
 
 .intro-teaser {
-  padding: 110px 0 60px 0;
+  padding: 80px 0 60px 0;
   background: url(../images/intro-teaser.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
   @media only screen and (min-width: 992px), print {
     .intro-teaser {
-      height: 315px; } }
+      height: 282px; } }
   .intro-teaser h2 {
     color: #fff; }
 
@@ -122,11 +122,16 @@ hr {
 .people-faculty-area .person-item h3 {
   min-height: 53px; }
 
-.people-student-area .person-item h3 {
-  min-height: 53px; }
-
-.people-student-area .person-item h4 {
-  min-height: 58px; }
+.people-student-area .person-item {
+  min-height: 358px; }
+  .people-student-area .person-item h3 {
+    min-height: 53px; }
+  .people-student-area .person-item h4 {
+    min-height: 40px; }
+  .people-student-area .person-item h3, .people-student-area .person-item h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
 
 .areas {
   background-color: #f5f5f5; }
