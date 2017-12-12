@@ -1,5 +1,4 @@
 # UCD-ML
 Machine Learning and AI group in UC Davis
 
-Open index.html file for editing.
-Only some html knowledge is required.
+Webpage will be available in https://it2003.github.io/UCD-ML/
