@@ -181,7 +181,7 @@ hr {
 .people-faculty-area {
     .person-item {
         transition: all 0.3s linear;
-        &:hover {
+        &:hover, &:focus {
             text-decoration: none;
         }
     }

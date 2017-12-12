@@ -116,7 +116,7 @@ hr {
 
 .people-faculty-area .person-item {
   transition: all 0.3s linear; }
-  .people-faculty-area .person-item:hover {
+  .people-faculty-area .person-item:hover, .people-faculty-area .person-item:focus {
     text-decoration: none; }
 
 .people-faculty-area .person-item h3 {
